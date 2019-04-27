@@ -20,6 +20,11 @@ router.get('/images/:id', imageController.show);
 router.post('/images/', upload.single('image'), imageController.store);
 router.put('/images/:id', imageController.update);
 router.delete('/images/:id', imageController.remove);
+router.post(
+  '/images/gallery',
+  upload.single('image'),
+  imageController.addToGallery
+);
 
 router.get('/galleries/', galleryController.index);
 router.post('/galleries/', galleryController.store);
