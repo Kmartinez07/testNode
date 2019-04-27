@@ -4,6 +4,10 @@ function index(req, res) {
   return res.status(200).send({ message: 'index' });
 }
 
+function show(req, res) {
+  return res.status(200).send({ message: 'show' });
+}
+
 function store(req, res) {
   if (req.file) {
     const { file } = req;
@@ -26,4 +30,4 @@ function update(req, res) {
   return res.status(200).send({ message: 'remove' });
 }
 
-module.exports = { index, store, remove, update };
+module.exports = { index, show, store, remove, update };
